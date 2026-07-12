@@ -50,8 +50,8 @@
 
 ---
 
-## [FEAT-05] Pending Archive Page
-- **Status**: Pending
+## [FEAT-05] Done Archive Page
+- **Status**: Done
 - **Description**: Posts grouped by month and year for browsing
 - **Details**:
   - Create `layouts/_default/list.html`
