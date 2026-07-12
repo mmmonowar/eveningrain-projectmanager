@@ -15,8 +15,8 @@
 
 ---
 
-## [FEAT-02] Pending Base Template
-- **Status**: Pending
+## [FEAT-02] Done Base Template
+- **Status**: Done
 - **Description**: HTML5 base template with meta tags and responsive viewport
 - **Details**:
   - Create `layouts/_default/baseof.html`
