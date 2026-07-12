@@ -2,8 +2,8 @@
 
 ---
 
-## [FEAT-01] Pending Hugo Project Config
-- **Status**: Pending
+## [FEAT-01] Done Hugo Project Config
+- **Status**: Done
 - **Description**: Hugo configuration file with base URL and theme settings
 - **Details**:
   - Create `hugo.yaml` in `/eveningrain/`
