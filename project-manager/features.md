@@ -89,9 +89,11 @@
 - **Description**: Automated build and deploy workflow for GitHub Pages
 - **Details**:
   - Create `.github/workflows/hugo.yml`
-  - Install Hugo on push to main
-  - Build static site
-  - Deploy to GitHub Pages
+  - On push to `main`: checks out both `eveningrain` site repo and `eveningrain-contents` content repo
+  - Content checkout uses `git clone --depth=1` (avoids `actions/checkout@v4` GitHub API limitations)
+  - Installs Hugo Extended, builds with `hugo --minify`
+  - Deploys to GitHub Pages via `actions/deploy-pages@v4`
+  - No manual build step needed — just push content to `eveningrain-contents` and trigger a deploy by pushing to `eveningrain`
 
 ---
 
