@@ -143,15 +143,19 @@
 
 ---
 
-## [FEAT-13] Pending Content Structure Mapping
-- **Status**: Pending
+## [FEAT-13] Done Content Structure Mapping
+- **Status**: Done
 - **Description**: Configure Hugo to read from content repository's directory structure
 - **Details**:
-  - Map `10 Posts/YYYY/YYYY-MM/YYYY-MM-DD/` to Hugo content
-  - Configure permalinks for clean URLs (`/post-title/`)
-  - Handle page bundles for posts with assets
-  - Parse `published` frontmatter field for dates
-  - Support post types: blog, microblog, literary, media, resources
+  - Replace `contentDir` with `module.mounts` mapping `10 Posts/` → `content/posts` section
+  - Rename post content files from `slug.md` → `index.md` for Hugo leaf bundle compatibility
+  - Clean URLs via `slug` frontmatter + `permalinks: posts: "/:slug/"`
+  - `published` frontmatter mapped to `.Date` via `frontmatter: { date: [published, date] }`
+  - Date-nested sections (`YYYY/`, `YYYY-MM/`, `YYYY-MM-DD/`) suppressed via `build: { list: never, render: never }`
+  - 5 type-specific post templates created: `blog`, `microblog`, `literary`, `media`, `resources` (all start identical to `_default/single.html`)
+  - `post-type` taxonomy via `type` frontmatter field
+  - Search page moved from content repo to `eveningrain/content/search/_index.md`
+  - `75 Templates/blog_template.md` updated with `slug`, `type`, and ISO date format
 
 ---
 
