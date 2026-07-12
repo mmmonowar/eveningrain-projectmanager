@@ -95,8 +95,8 @@
 
 ---
 
-## [FEAT-09] Pending Categories and Tags
-- **Status**: Pending (Future)
+## [FEAT-09] Done Categories and Tags
+- **Status**: Done
 - **Description**: Taxonomy pages for organizing posts by category and tag
 - **Details**:
   - Enable Hugo taxonomies in config
