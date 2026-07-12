@@ -37,8 +37,8 @@
 
 ---
 
-## [FEAT-04] Pending Post Template
-- **Status**: Pending
+## [FEAT-04] Done Post Template
+- **Status**: Done
 - **Description**: Individual post layout with title, date, content, and reading time
 - **Details**:
   - Create `layouts/_default/single.html`
