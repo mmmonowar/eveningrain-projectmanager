@@ -115,13 +115,18 @@
 
 ---
 
-## [FEAT-11] Pending Search
-- **Status**: Pending (Future)
+## [FEAT-11] Done Search
+- **Status**: Done
 - **Description**: Client-side search functionality for posts
 - **Details**:
-  - Integrate PageFind or similar library
-  - Add search input to header
-  - Index post content at build time
+  - Generate search index JSON at build time via Hugo output format (`layouts/index.json`)
+  - Add search input to header in `baseof.html` with dropdown quick results
+  - Dedicated search page at `/search/` with full results view
+  - Vanilla JS scoring by title, tags, summary, and full content
+  - Search styles in `static/css/style.css`
+  - `buildFuture: true` in config to index all content regardless of dates
+  - JS resolves search index URL from `data-search-index` attribute (supports sub-path deployment)
+  - Debounced input, keyboard navigation, URL query parameter support
 
 ---
 
