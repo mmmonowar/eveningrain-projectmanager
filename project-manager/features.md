@@ -1,3 +1,200 @@
 # Features
 
+---
 
+## [FEAT-01] Pending Hugo Project Config
+- **Status**: Pending
+- **Description**: Hugo configuration file with base URL and theme settings
+- **Details**:
+  - Create `hugo.yaml` in `/eveningrain/`
+  - Set base URL for GitHub Pages deployment
+  - Configure title, description, and theme parameters
+  - Set content directory to reference `/eveningrain-contents/10 Posts/`
+  - Configure permalinks for clean URL structure
+  - Enable page bundles for post folders with assets
+
+---
+
+## [FEAT-02] Pending Base Template
+- **Status**: Pending
+- **Description**: HTML5 base template with meta tags and responsive viewport
+- **Details**:
+  - Create `layouts/_default/baseof.html`
+  - Include `<head>` with meta tags, CSS, fonts
+  - Responsive viewport meta tag
+  - Block structure for child templates
+
+---
+
+## [FEAT-03] Pending Home Page
+- **Status**: Pending
+- **Description**: Landing page with recent posts list, site title, and tagline
+- **Details**:
+  - Create `layouts/index.html`
+  - Display site title and tagline
+  - List recent posts with title, date, and excerpt
+  - Link to individual posts
+
+---
+
+## [FEAT-04] Pending Post Template
+- **Status**: Pending
+- **Description**: Individual post layout with title, date, content, and reading time
+- **Details**:
+  - Create `layouts/_default/single.html`
+  - Display post title and publication date
+  - Render markdown content
+  - Show estimated reading time
+  - Navigation to previous/next posts
+  - Parse frontmatter: `published`, `title`, `tags`, `author`
+
+---
+
+## [FEAT-05] Pending Archive Page
+- **Status**: Pending
+- **Description**: Posts grouped by month and year for browsing
+- **Details**:
+  - Create `layouts/_default/list.html`
+  - Group posts by year and month
+  - Display post title, date, and excerpt
+  - Chronological ordering (newest first)
+
+---
+
+## [FEAT-06] Pending Dark Theme CSS
+- **Status**: Pending
+- **Description**: CSS implementing Evening Rain design system with dark theme and typography
+- **Details**:
+  - Create `static/css/style.css`
+  - CSS custom properties for color palette
+  - Source Serif 4 for headings
+  - Source Sans 3 for body text
+  - Dark background with light text
+
+---
+
+## [FEAT-07] Pending Responsive Layout
+- **Status**: Pending
+- **Description**: Mobile-first responsive design for clean reading experience
+- **Details**:
+  - Breakpoints for mobile, tablet, desktop
+  - Fluid typography scaling
+  - Readable line lengths (65-75 characters)
+  - Proper spacing and margins
+
+---
+
+## [FEAT-08] Pending GitHub Actions CI
+- **Status**: Pending
+- **Description**: Automated build and deploy workflow for GitHub Pages
+- **Details**:
+  - Create `.github/workflows/hugo.yml`
+  - Install Hugo on push to main
+  - Build static site
+  - Deploy to GitHub Pages
+
+---
+
+## [FEAT-09] Pending Categories and Tags
+- **Status**: Pending (Future)
+- **Description**: Taxonomy pages for organizing posts by category and tag
+- **Details**:
+  - Enable Hugo taxonomies in config
+  - Create taxonomy templates
+  - Add category/tag links to posts
+
+---
+
+## [FEAT-10] Pending RSS Feed
+- **Status**: Pending (Future)
+- **Description**: RSS feed for post syndication
+- **Details**:
+  - Hugo auto-generates RSS by default
+  - Customize feed template if needed
+  - Add RSS link to site header
+
+---
+
+## [FEAT-11] Pending Search
+- **Status**: Pending (Future)
+- **Description**: Client-side search functionality for posts
+- **Details**:
+  - Integrate PageFind or similar library
+  - Add search input to header
+  - Index post content at build time
+
+---
+
+## [FEAT-12] Pending Dark Light Toggle
+- **Status**: Pending (Future)
+- **Description**: Theme switcher for dark and light modes
+- **Details**:
+  - Add toggle button to header
+  - CSS variables for both themes
+  - LocalStorage for theme preference
+  - Smooth transition between themes
+
+---
+
+## [FEAT-13] Pending Content Structure Mapping
+- **Status**: Pending
+- **Description**: Configure Hugo to read from content repository's directory structure
+- **Details**:
+  - Map `10 Posts/YYYY/YYYY-MM/YYYY-MM-DD/` to Hugo content
+  - Configure permalinks for clean URLs (`/post-title/`)
+  - Handle page bundles for posts with assets
+  - Parse `published` frontmatter field for dates
+  - Support post types: blog, microblog, literary, media, resources
+
+---
+
+## Content Structure Reference
+
+### Source: `/eveningrain-contents/10 Posts/`
+
+```
+10 Posts/
+├── YYYY/
+│   ├── YYYY-MM/
+│   │   ├── YYYY-MM-DD/
+│   │   │   └── YYYY-MM-DD-hh-mm-ss_post-type_post-title/
+│   │   │       ├── YYYY-MM-DD-hh-mm-ss_post-type_post-title.md
+│   │   │       └── assettype_asset-title.img
+```
+
+### Post Frontmatter
+
+```yaml
+---
+published: YYYY-MM-DD-hh-mm-ss
+title: Post Title
+tags: [tag-1, tag-2]
+author: $author
+---
+```
+
+### Site Metadata (`/eveningrain-contents/70 Metadata/metadata.yaml`)
+
+```yaml
+title: "Evening Rain"
+author: "Muhammad Mustafa Monowar"
+copyright: "© 2026 Muhammad Mustafa Monowar All rights reserved"
+```
+
+### Post Types
+
+| Type | Directory Prefix | Description |
+|------|------------------|-------------|
+| blog | `_blog_` | Long-form blog posts |
+| microblog | `_microblog_` | Short-form microblogs |
+| literary | `_literary_` | Literary work (poetry, fiction) |
+| media | `_media_` | Media posts (images, video) |
+| resources | `_resources_` | Resource collections |
+
+### Asset Naming
+
+| Asset Type | Format | Example |
+|------------|--------|---------|
+| Image | `image_title.jpg` | `image_sunset.jpg` |
+| Video | `video_title.mp4` | `video_rain.mp4` |
+| Document | `document_title.pdf` | `document_notes.pdf` |
