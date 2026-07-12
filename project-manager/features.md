@@ -130,14 +130,16 @@
 
 ---
 
-## [FEAT-12] Pending Dark Light Toggle
-- **Status**: Pending (Future)
+## [FEAT-12] Done Dark Light Toggle
+- **Status**: Done
 - **Description**: Theme switcher for dark and light modes
 - **Details**:
-  - Add toggle button to header
-  - CSS variables for both themes
-  - LocalStorage for theme preference
-  - Smooth transition between themes
+  - Add toggle button to header in `baseof.html`
+  - `[data-theme="light"]` CSS block redefining all 9 color variables to light values
+  - FOUC-prevention via synchronous inline `&lt;script&gt;` in `<head>` reading localStorage then `prefers-color-scheme`
+  - `theme.js` handles toggle click, updates `data-theme`, saves to localStorage
+  - Smooth transitions on `color`, `background-color`, and `border-color` (respects `prefers-reduced-motion`)
+  - Theme toggle button with sun/moon Unicode icons
 
 ---
 
