@@ -61,8 +61,8 @@
 
 ---
 
-## [FEAT-06] Pending Dark Theme CSS
-- **Status**: Pending
+## [FEAT-06] Done Dark Theme CSS
+- **Status**: Done
 - **Description**: CSS implementing Evening Rain design system with dark theme and typography
 - **Details**:
   - Create `static/css/style.css`
