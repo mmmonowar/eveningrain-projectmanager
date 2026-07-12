@@ -84,8 +84,8 @@
 
 ---
 
-## [FEAT-08] Pending GitHub Actions CI
-- **Status**: Pending
+## [FEAT-08] Done GitHub Actions CI
+- **Status**: Done
 - **Description**: Automated build and deploy workflow for GitHub Pages
 - **Details**:
   - Create `.github/workflows/hugo.yml`
