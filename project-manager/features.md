@@ -26,8 +26,8 @@
 
 ---
 
-## [FEAT-03] Pending Home Page
-- **Status**: Pending
+## [FEAT-03] Done Home Page
+- **Status**: Done
 - **Description**: Landing page with recent posts list, site title, and tagline
 - **Details**:
   - Create `layouts/index.html`
