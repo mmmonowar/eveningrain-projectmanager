@@ -105,8 +105,8 @@
 
 ---
 
-## [FEAT-10] Pending RSS Feed
-- **Status**: Pending (Future)
+## [FEAT-10] Done RSS Feed
+- **Status**: Done
 - **Description**: RSS feed for post syndication
 - **Details**:
   - Hugo auto-generates RSS by default
